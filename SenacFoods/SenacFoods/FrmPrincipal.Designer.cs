@@ -29,78 +29,112 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            btnUsuário = new Button();
+            btnPedido = new Button();
+            btnComanda = new Button();
+            btnCardápio = new Button();
+            btnFechar = new Button();
+            btnMinimizar = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button4);
-            groupBox1.Controls.Add(button3);
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(btnUsuário);
+            groupBox1.Controls.Add(btnPedido);
+            groupBox1.Controls.Add(btnComanda);
+            groupBox1.Controls.Add(btnCardápio);
             groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(69, 77);
+            groupBox1.Location = new Point(75, 76);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(789, 272);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Senac Foods";
             // 
-            // button1
+            // btnUsuário
             // 
-            button1.BackColor = Color.Coral;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(23, 61);
-            button1.Name = "button1";
-            button1.Size = new Size(169, 163);
-            button1.TabIndex = 0;
-            button1.Text = "Cardápio";
-            button1.UseVisualStyleBackColor = false;
+            btnUsuário.BackColor = Color.LightCoral;
+            btnUsuário.FlatStyle = FlatStyle.Flat;
+            btnUsuário.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnUsuário.ForeColor = Color.Black;
+            btnUsuário.Location = new Point(600, 61);
+            btnUsuário.Name = "btnUsuário";
+            btnUsuário.Size = new Size(169, 163);
+            btnUsuário.TabIndex = 0;
+            btnUsuário.Text = "Usuário";
+            btnUsuário.UseVisualStyleBackColor = false;
+            btnUsuário.Click += btnUsuário_Click;
             // 
-            // button2
+            // btnPedido
             // 
-            button2.BackColor = Color.LimeGreen;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Black;
-            button2.Location = new Point(209, 61);
-            button2.Name = "button2";
-            button2.Size = new Size(182, 163);
-            button2.TabIndex = 0;
-            button2.Text = "Comando";
-            button2.UseVisualStyleBackColor = false;
+            btnPedido.BackColor = Color.Coral;
+            btnPedido.FlatStyle = FlatStyle.Flat;
+            btnPedido.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPedido.ForeColor = Color.Black;
+            btnPedido.Location = new Point(410, 61);
+            btnPedido.Name = "btnPedido";
+            btnPedido.Size = new Size(169, 163);
+            btnPedido.TabIndex = 0;
+            btnPedido.Text = "Pedido Cozinha";
+            btnPedido.UseVisualStyleBackColor = false;
+            btnPedido.Click += btnPedido_Click;
             // 
-            // button3
+            // btnComanda
             // 
-            button3.BackColor = Color.Coral;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.Black;
-            button3.Location = new Point(410, 61);
-            button3.Name = "button3";
-            button3.Size = new Size(169, 163);
-            button3.TabIndex = 0;
-            button3.Text = "Pedido Cozinha";
-            button3.UseVisualStyleBackColor = false;
+            btnComanda.BackColor = Color.LimeGreen;
+            btnComanda.FlatStyle = FlatStyle.Flat;
+            btnComanda.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnComanda.ForeColor = Color.Black;
+            btnComanda.Location = new Point(209, 61);
+            btnComanda.Name = "btnComanda";
+            btnComanda.Size = new Size(182, 163);
+            btnComanda.TabIndex = 0;
+            btnComanda.Text = "Comanda";
+            btnComanda.UseVisualStyleBackColor = false;
+            btnComanda.Click += btnComanda_Click;
             // 
-            // button4
+            // btnCardápio
             // 
-            button4.BackColor = Color.Coral;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.Black;
-            button4.Location = new Point(600, 61);
-            button4.Name = "button4";
-            button4.Size = new Size(169, 163);
-            button4.TabIndex = 0;
-            button4.Text = "Usuário";
-            button4.UseVisualStyleBackColor = false;
+            btnCardápio.BackColor = Color.Orange;
+            btnCardápio.FlatStyle = FlatStyle.Flat;
+            btnCardápio.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCardápio.ForeColor = Color.Black;
+            btnCardápio.Location = new Point(23, 61);
+            btnCardápio.Name = "btnCardápio";
+            btnCardápio.Size = new Size(169, 163);
+            btnCardápio.TabIndex = 0;
+            btnCardápio.Text = "Cardápio";
+            btnCardápio.UseVisualStyleBackColor = false;
+            btnCardápio.Click += btnCardápio_Click;
+            // 
+            // btnFechar
+            // 
+            btnFechar.FlatStyle = FlatStyle.Flat;
+            btnFechar.Font = new Font("Segoe UI", 11F);
+            btnFechar.ForeColor = SystemColors.ButtonFace;
+            btnFechar.Location = new Point(877, 12);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(64, 46);
+            btnFechar.TabIndex = 1;
+            btnFechar.Tag = "x";
+            btnFechar.Text = "x";
+            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click_1;
+            // 
+            // btnMinimizar
+            // 
+            btnMinimizar.FlatStyle = FlatStyle.Flat;
+            btnMinimizar.Font = new Font("Segoe UI", 11F);
+            btnMinimizar.ForeColor = SystemColors.ButtonFace;
+            btnMinimizar.Location = new Point(800, 12);
+            btnMinimizar.Name = "btnMinimizar";
+            btnMinimizar.Size = new Size(64, 46);
+            btnMinimizar.TabIndex = 2;
+            btnMinimizar.Tag = "x";
+            btnMinimizar.Text = "-";
+            btnMinimizar.UseVisualStyleBackColor = true;
+            btnMinimizar.Click += btnMinimizar_Click;
             // 
             // FrmPrincipal
             // 
@@ -108,6 +142,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(953, 470);
+            Controls.Add(btnMinimizar);
+            Controls.Add(btnFechar);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmPrincipal";
@@ -120,9 +156,11 @@
         #endregion
 
         private GroupBox groupBox1;
-        private Button button1;
-        private Button button3;
-        private Button button2;
-        private Button button4;
+        private Button btnCardápio;
+        private Button btnPedido;
+        private Button btnComanda;
+        private Button btnUsuário;
+        private Button btnFechar;
+        private Button btnMinimizar;
     }
 }

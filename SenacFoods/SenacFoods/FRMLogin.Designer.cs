@@ -30,11 +30,12 @@
         {
             panel1 = new Panel();
             panel2 = new Panel();
-            txtLogin = new TextBox();
-            txtSenha = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
+            btnFechar = new Button();
             btnEntrar = new Button();
+            txtSenha = new TextBox();
+            txtLogin = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(btnFechar);
             panel2.Controls.Add(btnEntrar);
             panel2.Controls.Add(txtSenha);
             panel2.Controls.Add(txtLogin);
@@ -60,52 +62,19 @@
             panel2.Size = new Size(506, 530);
             panel2.TabIndex = 1;
             // 
-            // txtLogin
+            // btnFechar
             // 
-            txtLogin.BackColor = Color.Black;
-            txtLogin.BorderStyle = BorderStyle.None;
-            txtLogin.Font = new Font("Segoe UI", 14F);
-            txtLogin.ForeColor = Color.White;
-            txtLogin.Location = new Point(66, 79);
-            txtLogin.Name = "txtLogin";
-            txtLogin.Size = new Size(336, 38);
-            txtLogin.TabIndex = 0;
-            txtLogin.Text = "USUÁRIO";
-            
-            // 
-            // txtSenha
-            // 
-            txtSenha.BackColor = Color.Black;
-            txtSenha.BorderStyle = BorderStyle.None;
-            txtSenha.Font = new Font("Segoe UI", 14F);
-            txtSenha.ForeColor = Color.White;
-            txtSenha.Location = new Point(66, 158);
-            txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(336, 38);
-            txtSenha.TabIndex = 0;
-            txtSenha.Text = "SENHA";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(57, 90);
-            label1.Name = "label1";
-            label1.Size = new Size(353, 38);
-            label1.TabIndex = 1;
-            label1.Text = "____________________________";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14F);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(57, 167);
-            label2.Name = "label2";
-            label2.Size = new Size(353, 38);
-            label2.TabIndex = 1;
-            label2.Text = "____________________________";
+            btnFechar.FlatStyle = FlatStyle.Flat;
+            btnFechar.Font = new Font("Segoe UI", 11F);
+            btnFechar.ForeColor = SystemColors.ButtonFace;
+            btnFechar.Location = new Point(436, 12);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(58, 48);
+            btnFechar.TabIndex = 3;
+            btnFechar.Tag = "x";
+            btnFechar.Text = "x";
+            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
             // 
             // btnEntrar
             // 
@@ -122,6 +91,53 @@
             btnEntrar.TabIndex = 2;
             btnEntrar.Text = "ENTRAR";
             btnEntrar.UseVisualStyleBackColor = false;
+            btnEntrar.Click += btnEntrar_Click;
+            // 
+            // txtSenha
+            // 
+            txtSenha.BackColor = Color.Black;
+            txtSenha.BorderStyle = BorderStyle.None;
+            txtSenha.Font = new Font("Segoe UI", 14F);
+            txtSenha.ForeColor = Color.White;
+            txtSenha.Location = new Point(66, 158);
+            txtSenha.Name = "txtSenha";
+            txtSenha.Size = new Size(336, 38);
+            txtSenha.TabIndex = 0;
+            txtSenha.Text = "SENHA";
+            // 
+            // txtLogin
+            // 
+            txtLogin.BackColor = Color.Black;
+            txtLogin.BorderStyle = BorderStyle.None;
+            txtLogin.Font = new Font("Segoe UI", 14F);
+            txtLogin.ForeColor = Color.White;
+            txtLogin.Location = new Point(66, 79);
+            txtLogin.Name = "txtLogin";
+            txtLogin.Size = new Size(336, 38);
+            txtLogin.TabIndex = 0;
+            txtLogin.Text = "USUÁRIO";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14F);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(57, 167);
+            label2.Name = "label2";
+            label2.Size = new Size(353, 38);
+            label2.TabIndex = 1;
+            label2.Text = "____________________________";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(57, 90);
+            label1.Name = "label1";
+            label1.Size = new Size(353, 38);
+            label1.TabIndex = 1;
+            label1.Text = "____________________________";
             // 
             // FRMLogin
             // 
@@ -149,5 +165,6 @@
         private Label label1;
         private Label label2;
         private Button btnEntrar;
+        private Button btnFechar;
     }
 }
