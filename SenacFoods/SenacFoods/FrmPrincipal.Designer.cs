@@ -35,6 +35,7 @@
             btnCardápio = new Button();
             btnFechar = new Button();
             btnMinimizar = new Button();
+            lblMensagem = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -136,12 +137,24 @@
             btnMinimizar.UseVisualStyleBackColor = true;
             btnMinimizar.Click += btnMinimizar_Click;
             // 
+            // lblMensagem
+            // 
+            lblMensagem.AutoSize = true;
+            lblMensagem.Font = new Font("Segoe UI", 16F);
+            lblMensagem.ForeColor = SystemColors.ButtonFace;
+            lblMensagem.Location = new Point(180, 17);
+            lblMensagem.Name = "lblMensagem";
+            lblMensagem.Size = new Size(213, 45);
+            lblMensagem.TabIndex = 3;
+            lblMensagem.Text = "lblMensagem";
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(953, 470);
+            Controls.Add(lblMensagem);
             Controls.Add(btnMinimizar);
             Controls.Add(btnFechar);
             Controls.Add(groupBox1);
@@ -151,6 +164,7 @@
             Text = "FrmPrincipal";
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -162,5 +176,6 @@
         private Button btnUsuário;
         private Button btnFechar;
         private Button btnMinimizar;
+        private Label lblMensagem;
     }
 }
