@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            button3 = new Button();
             dataGridView1 = new DataGridView();
             button1 = new Button();
             button2 = new Button();
             label1 = new Label();
             textBox1 = new TextBox();
             btnFechar = new Button();
-            button3 = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -52,6 +52,18 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cardapio";
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Khaki;
+            button3.Location = new Point(24, 38);
+            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(133, 42);
+            button3.TabIndex = 6;
+            button3.Text = "+ Item";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // dataGridView1
             // 
@@ -117,17 +129,6 @@
             btnFechar.Tag = "x";
             btnFechar.Text = "x";
             btnFechar.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Khaki;
-            button3.Location = new Point(24, 38);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(133, 42);
-            button3.TabIndex = 6;
-            button3.Text = "+ Item";
-            button3.UseVisualStyleBackColor = false;
             // 
             // FrmCardápio
             // 

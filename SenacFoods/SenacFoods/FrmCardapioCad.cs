@@ -44,6 +44,8 @@ namespace SenacFoods
                 banco.SaveChanges();
                 // salvar as alterações no banco
             }
+            MessageBox.Show("Cardápio salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }

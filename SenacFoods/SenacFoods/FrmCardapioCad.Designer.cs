@@ -73,7 +73,7 @@
             // 
             btnSalvar.BackColor = Color.YellowGreen;
             btnSalvar.Font = new Font("Segoe UI", 10F);
-            btnSalvar.Location = new Point(835, 564);
+            btnSalvar.Location = new Point(823, 500);
             btnSalvar.Margin = new Padding(3, 4, 3, 4);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(160, 57);
@@ -86,6 +86,7 @@
             // 
             groupBox1.Controls.Add(txtPreco);
             groupBox1.Controls.Add(txtDescrição);
+            groupBox1.Controls.Add(btnSalvar);
             groupBox1.Controls.Add(txtTitulo);
             groupBox1.Controls.Add(chkPossuiPreparo);
             groupBox1.Controls.Add(label4);
@@ -181,7 +182,6 @@
             ClientSize = new Size(1016, 631);
             Controls.Add(label1);
             Controls.Add(btnCancelar);
-            Controls.Add(btnSalvar);
             Controls.Add(groupBox1);
             Controls.Add(btnFechar);
             FormBorderStyle = FormBorderStyle.None;
