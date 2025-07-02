@@ -33,7 +33,8 @@ namespace SenacFoods
                 decimal.TryParse(txtPreco.Text, out decimal preco);
                 bool possuiPreparo = chkPossuiPreparo.Checked;
                 // criar um novo cardapio
-                var cardapio = new CardapioItem{
+                var cardapio = new CardapioItem
+                {
                     Descricao = descricao,
                     Titulo = titulo,
                     Preco = preco,
@@ -45,6 +46,21 @@ namespace SenacFoods
                 // salvar as alterações no banco
             }
             MessageBox.Show("Cardápio salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

@@ -56,6 +56,7 @@
             btnFechar.Tag = "x";
             btnFechar.Text = "x";
             btnFechar.UseVisualStyleBackColor = false;
+            btnFechar.Click += btnFechar_Click;
             // 
             // btnCancelar
             // 
@@ -68,6 +69,7 @@
             btnCancelar.TabIndex = 9;
             btnCancelar.Text = "X Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnSalvar
             // 
@@ -101,6 +103,7 @@
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cardapio";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // txtPreco
             // 
