@@ -36,19 +36,21 @@
             btnFechar = new Button();
             btnMinimizar = new Button();
             lblMensagem = new Label();
+            button1 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(btnUsuário);
             groupBox1.Controls.Add(btnPedido);
             groupBox1.Controls.Add(btnComanda);
             groupBox1.Controls.Add(btnCardápio);
             groupBox1.ForeColor = Color.White;
-            groupBox1.Location = new Point(75, 76);
+            groupBox1.Location = new Point(44, 76);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(789, 272);
+            groupBox1.Size = new Size(878, 368);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Senac Foods";
@@ -59,7 +61,7 @@
             btnUsuário.FlatStyle = FlatStyle.Flat;
             btnUsuário.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnUsuário.ForeColor = Color.Black;
-            btnUsuário.Location = new Point(600, 61);
+            btnUsuário.Location = new Point(665, 61);
             btnUsuário.Name = "btnUsuário";
             btnUsuário.Size = new Size(169, 163);
             btnUsuário.TabIndex = 0;
@@ -73,7 +75,7 @@
             btnPedido.FlatStyle = FlatStyle.Flat;
             btnPedido.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnPedido.ForeColor = Color.Black;
-            btnPedido.Location = new Point(410, 61);
+            btnPedido.Location = new Point(459, 61);
             btnPedido.Name = "btnPedido";
             btnPedido.Size = new Size(169, 163);
             btnPedido.TabIndex = 0;
@@ -87,7 +89,7 @@
             btnComanda.FlatStyle = FlatStyle.Flat;
             btnComanda.Font = new Font("Century Gothic", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnComanda.ForeColor = Color.Black;
-            btnComanda.Location = new Point(209, 61);
+            btnComanda.Location = new Point(236, 61);
             btnComanda.Name = "btnComanda";
             btnComanda.Size = new Size(182, 163);
             btnComanda.TabIndex = 0;
@@ -148,6 +150,18 @@
             lblMensagem.TabIndex = 3;
             lblMensagem.Text = "lblMensagem";
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Thistle;
+            button1.Font = new Font("Century Gothic", 14F);
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(334, 252);
+            button1.Name = "button1";
+            button1.Size = new Size(217, 88);
+            button1.TabIndex = 1;
+            button1.Text = "Mesas";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -177,5 +191,6 @@
         private Button btnFechar;
         private Button btnMinimizar;
         private Label lblMensagem;
+        private Button button1;
     }
 }

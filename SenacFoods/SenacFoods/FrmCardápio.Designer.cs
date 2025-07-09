@@ -31,11 +31,12 @@
             groupBox1 = new GroupBox();
             btnAdicionar = new Button();
             dataGridView1 = new DataGridView();
-            button1 = new Button();
-            button2 = new Button();
+            btnEditar = new Button();
+            btnExcluir = new Button();
             label1 = new Label();
             txtPesquisa = new TextBox();
             btnFechar = new Button();
+            mySqlCommand1 = new MySqlConnector.MySqlCommand();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -74,28 +75,32 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(959, 321);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
-            // button1
+            // btnEditar
             // 
-            button1.BackColor = Color.YellowGreen;
-            button1.Location = new Point(863, 571);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(160, 57);
-            button1.TabIndex = 1;
-            button1.Text = "# Editar";
-            button1.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = Color.YellowGreen;
+            btnEditar.Enabled = false;
+            btnEditar.Location = new Point(863, 571);
+            btnEditar.Margin = new Padding(3, 4, 3, 4);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(160, 57);
+            btnEditar.TabIndex = 1;
+            btnEditar.Text = "# Editar";
+            btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
-            // button2
+            // btnExcluir
             // 
-            button2.BackColor = Color.Tomato;
-            button2.Location = new Point(707, 571);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(150, 57);
-            button2.TabIndex = 2;
-            button2.Text = "X Excluir";
-            button2.UseVisualStyleBackColor = false;
+            btnExcluir.BackColor = Color.Tomato;
+            btnExcluir.Location = new Point(707, 571);
+            btnExcluir.Margin = new Padding(3, 4, 3, 4);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(150, 57);
+            btnExcluir.TabIndex = 2;
+            btnExcluir.Text = "X Excluir";
+            btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // label1
             // 
@@ -131,6 +136,13 @@
             btnFechar.UseVisualStyleBackColor = false;
             btnFechar.Click += btnFechar_Click;
             // 
+            // mySqlCommand1
+            // 
+            mySqlCommand1.CommandTimeout = 0;
+            mySqlCommand1.Connection = null;
+            mySqlCommand1.Transaction = null;
+            mySqlCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
             // FrmCardápio
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
@@ -139,8 +151,8 @@
             Controls.Add(btnFechar);
             Controls.Add(txtPesquisa);
             Controls.Add(label1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnEditar);
             Controls.Add(groupBox1);
             Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
@@ -158,11 +170,12 @@
 
         private GroupBox groupBox1;
         private DataGridView dataGridView1;
-        private Button button1;
-        private Button button2;
+        private Button btnEditar;
+        private Button btnExcluir;
         private Label label1;
         private TextBox txtPesquisa;
         private Button btnAdicionar;
         private Button btnFechar;
+        private MySqlConnector.MySqlCommand mySqlCommand1;
     }
 }
