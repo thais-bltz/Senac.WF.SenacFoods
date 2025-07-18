@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SenacFoods
 {
-    public partial class FrmUsuario : Form
+    public partial class FrmUsuarios : Form
     {
-        public FrmUsuario()
+        public FrmUsuarios()
         {
             InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

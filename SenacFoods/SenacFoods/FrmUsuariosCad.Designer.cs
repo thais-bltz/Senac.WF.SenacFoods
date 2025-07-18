@@ -1,6 +1,6 @@
 ﻿namespace SenacFoods
 {
-    partial class FrmUsuario
+    partial class FrmUsuariosCad
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmUsuario";
+            SuspendLayout();
+            // 
+            // FrmUsuariosCad
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(867, 516);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "FrmUsuariosCad";
+            Text = "FrmUsuariosCad";
+            ResumeLayout(false);
         }
 
         #endregion
