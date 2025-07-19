@@ -190,6 +190,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmCardapioCad";
             Text = "FrmCardapioCad";
+            Load += FrmCardapioCad_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

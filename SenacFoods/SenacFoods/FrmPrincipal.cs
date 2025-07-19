@@ -56,12 +56,11 @@ namespace SenacFoods
         {
             var frmPedido = new FrmPedidoCozinha();
             frmPedido.ShowDialog();
-        }  
-
-        private void btnUsuário_Click(object sender, EventArgs e)
-        {
-            var frmUsuário = new FrmUsuario();
-            frmUsuário.ShowDialog();
         }
-    } 
+       private void btnUsuário_Click(object sender, EventArgs e)
+        {
+            var frmUsuarios = new FrmUsuarios();
+            frmUsuarios.ShowDialog();
+        }
+    }
 } 

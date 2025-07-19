@@ -36,13 +36,11 @@
             btnFechar = new Button();
             btnMinimizar = new Button();
             lblMensagem = new Label();
-            button1 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(btnUsuário);
             groupBox1.Controls.Add(btnPedido);
             groupBox1.Controls.Add(btnComanda);
@@ -150,18 +148,6 @@
             lblMensagem.TabIndex = 3;
             lblMensagem.Text = "lblMensagem";
             // 
-            // button1
-            // 
-            button1.BackColor = Color.Thistle;
-            button1.Font = new Font("Century Gothic", 14F);
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(334, 252);
-            button1.Name = "button1";
-            button1.Size = new Size(217, 88);
-            button1.TabIndex = 1;
-            button1.Text = "Mesas";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -191,6 +177,5 @@
         private Button btnFechar;
         private Button btnMinimizar;
         private Label lblMensagem;
-        private Button button1;
     }
 }

@@ -52,12 +52,12 @@ namespace SenacFoods
             {
                 AtualizarCardapio();
             }
-               
+
         }
 
         private void AtualizarCardapio()
         {
-            using(var banco = new ComandaDBContext())
+            using (var banco = new ComandaDBContext())
             {
                 // captar os dados da tela
                 string titulo = txtTitulo.Text;
@@ -118,6 +118,11 @@ namespace SenacFoods
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmCardapioCad_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

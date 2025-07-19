@@ -31,7 +31,7 @@
             dataGridView1 = new DataGridView();
             btnEditar = new Button();
             btnExcluir = new Button();
-            textBox1 = new TextBox();
+            txtPesquisa = new TextBox();
             btnAdicionar = new Button();
             btnFechar = new Button();
             txtPesquisarUsuarios = new TextBox();
@@ -46,6 +46,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(807, 296);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btnEditar
             // 
@@ -56,6 +57,7 @@
             btnEditar.TabIndex = 1;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 
@@ -66,14 +68,15 @@
             btnExcluir.TabIndex = 2;
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
-            // textBox1
+            // txtPesquisa
             // 
-            textBox1.Location = new Point(246, 31);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(530, 31);
-            textBox1.TabIndex = 3;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtPesquisa.Location = new Point(246, 31);
+            txtPesquisa.Name = "txtPesquisa";
+            txtPesquisa.Size = new Size(530, 31);
+            txtPesquisa.TabIndex = 3;
+            txtPesquisa.TextChanged += textBox1_TextChanged;
             // 
             // btnAdicionar
             // 
@@ -83,6 +86,7 @@
             btnAdicionar.TabIndex = 4;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = true;
+            btnAdicionar.Click += btnAdicionar_Click;
             // 
             // btnFechar
             // 
@@ -97,6 +101,7 @@
             btnFechar.Tag = "x";
             btnFechar.Text = "x";
             btnFechar.UseVisualStyleBackColor = false;
+            btnFechar.Click += btnFechar_Click;
             // 
             // txtPesquisarUsuarios
             // 
@@ -116,7 +121,7 @@
             Controls.Add(txtPesquisarUsuarios);
             Controls.Add(btnFechar);
             Controls.Add(btnAdicionar);
-            Controls.Add(textBox1);
+            Controls.Add(txtPesquisa);
             Controls.Add(btnExcluir);
             Controls.Add(btnEditar);
             Controls.Add(dataGridView1);
@@ -133,7 +138,7 @@
         private DataGridView dataGridView1;
         private Button btnEditar;
         private Button btnExcluir;
-        private TextBox textBox1;
+        private TextBox txtPesquisa;
         private Button btnAdicionar;
         private Button btnFechar;
         private TextBox txtPesquisarUsuarios;
