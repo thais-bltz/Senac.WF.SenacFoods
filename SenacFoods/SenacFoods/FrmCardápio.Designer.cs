@@ -53,6 +53,7 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Cardapio";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // btnAdicionar
             // 
@@ -76,6 +77,7 @@
             dataGridView1.Size = new Size(959, 321);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btnEditar
             // 

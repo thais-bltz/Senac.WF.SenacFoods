@@ -69,7 +69,7 @@ namespace SenacFoods
             if (e.RowIndex > 0)
             {
                 // pegar o cardapio de edição
-                 cardapioSelecionado = dataGridView1.Rows[e.RowIndex].DataBoundItem as CardapioItem;
+                cardapioSelecionado = dataGridView1.Rows[e.RowIndex].DataBoundItem as CardapioItem;
                 btnEditar.Enabled = true;
             }
         }
@@ -106,6 +106,16 @@ namespace SenacFoods
                 MessageBox.Show("Selecione um cardápio para excluir.", "Aviso",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

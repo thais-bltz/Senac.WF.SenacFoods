@@ -126,6 +126,7 @@
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(636, 37);
             txtTitulo.TabIndex = 4;
+            txtTitulo.TextChanged += txtTitulo_TextChanged;
             // 
             // chkPossuiPreparo
             // 

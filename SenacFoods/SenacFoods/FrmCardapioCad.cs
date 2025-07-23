@@ -124,5 +124,10 @@ namespace SenacFoods
         {
 
         }
+
+        private void txtTitulo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,8 +36,8 @@
             btnSalvar = new Button();
             btnCancelar = new Button();
             panel1 = new Panel();
-            textBox5 = new TextBox();
             button1 = new Button();
+            textBox5 = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -80,6 +80,7 @@
             txtConfirmacaoDeSenha.Size = new Size(626, 37);
             txtConfirmacaoDeSenha.TabIndex = 3;
             txtConfirmacaoDeSenha.Text = "Confirmação de senha";
+            txtConfirmacaoDeSenha.TextChanged += txtConfirmacaoDeSenha_TextChanged;
             // 
             // comboBoxPerfil
             // 
@@ -128,6 +129,17 @@
             panel1.Size = new Size(868, 89);
             panel1.TabIndex = 7;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Tan;
+            button1.Location = new Point(814, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(51, 42);
+            button1.TabIndex = 8;
+            button1.Text = "X";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // textBox5
             // 
             textBox5.BackColor = Color.Tan;
@@ -138,16 +150,6 @@
             textBox5.Size = new Size(182, 40);
             textBox5.TabIndex = 0;
             textBox5.Text = "Cad Usuarios";
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Tan;
-            button1.Location = new Point(814, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(51, 42);
-            button1.TabIndex = 8;
-            button1.Text = "X";
-            button1.UseVisualStyleBackColor = false;
             // 
             // FrmUsuariosCad
             // 
