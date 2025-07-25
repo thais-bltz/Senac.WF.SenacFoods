@@ -52,9 +52,9 @@ namespace SenacFoods
         {
             using (var banco = new ComandaDBContext())
             {
-             
+
                 // Atualizar o cardapio
-                var usuario = banco.Usuarios.First(x => x.Id == _usuario.Id);
+                var usuario = banco.Usuarios.First(x => x.Id == _usuario.);
                 usuario.Nome = txtNome;
                 usuario.Email = txtEmail;
                 usuario.Senha = txtSenha;
