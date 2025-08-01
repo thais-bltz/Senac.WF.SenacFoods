@@ -168,6 +168,7 @@
             label2.Size = new Size(67, 30);
             label2.TabIndex = 0;
             label2.Text = "Titulo";
+            label2.Click += label2_Click;
             // 
             // label1
             // 

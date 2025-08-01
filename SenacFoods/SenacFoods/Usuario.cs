@@ -23,7 +23,6 @@ namespace SenacFoods
         public string Senha { get; set; }
         // ativo bool
         public bool Ativo {  get; set; }
-
         public string Perfil { get; set; }
 
 

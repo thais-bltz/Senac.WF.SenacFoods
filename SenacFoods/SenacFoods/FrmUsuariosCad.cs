@@ -52,19 +52,25 @@ namespace SenacFoods
         {
             using (var banco = new ComandaDBContext())
             {
+                string nome = txtNome.Text;
+                string email = txtEmail.Text;
+                string senha = txtSenha.Text;
+                string perfil = comboBoxPerfil.Text;
 
-                // Atualizar o cardapio
-                var usuario = banco.Usuarios.First(x => x.Id == _usuario.);
-                usuario.Nome = txtNome;
-                usuario.Email = txtEmail;
-                usuario.Senha = txtSenha;
-                usuario.Perfil = comboBoxPerfil;
+                // Atualizar o usuario
+                var usuario = new Usuario
+                { 
+                    Nome = nome,
+                    Email = email,
+                    Senha = senha,
+                    Perfil = perfil,
+                };
                 //Salvar as alterações no banco
                 banco.Usuarios.Update(usuario);
                 banco.SaveChanges();
+                MessageBox.Show("Usuario salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //this.Close();
             }
-            MessageBox.Show("Usuario salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
         }
         
 
