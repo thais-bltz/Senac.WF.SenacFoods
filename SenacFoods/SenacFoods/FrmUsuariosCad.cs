@@ -12,16 +12,37 @@ namespace SenacFoods
 {
     public partial class FrmUsuariosCad : Form
     {
-        private object _Usuario;
+        private Usuario _usuarioItem;
+        private Usuario? usuarioItem;
+        
 
-        public FrmUsuariosCad(Usuario usuarioSelecionado)
+        public FrmUsuariosCad(Usuario usuarioItem)
         {
             InitializeComponent();
         }
 
+        public FrmUsuariosCad(object usuarioSelecionado)
+        {
+            _usuarioItem = usuarioItem;
+            InitializeComponent();
+
+            CarregarDadosDaTela();
+        }
+
+        private void CarregarDadosDaTela()
+        {
+            if (_usuarioItem == null)
+            {
+                txtNome.Text = _usuarioItem.Nome;
+                txtEmail.Text = _usuarioItem.Email;
+                txtSenha.Text = _usuarioItem.Senha;
+                txtConfirmacaoDeSenha.Text = _usuarioItem.ConfirmacaoDeSenha;
+                comboBoxPerfil.Text = _usuarioItem.Perfil;
+            }
+        }
+
         public FrmUsuariosCad()
         {
-            InitializeComponent();
         }
 
         private void comboBoxPerfil_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,20 +57,29 @@ namespace SenacFoods
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            // INSERIR
-            if (_Usuario == null)
+            if (!ValidarCampos())
+                return;
+
+            using (var banco = new ComandaDBContext())
             {
-                InserirUsuario();
-            }
-            // ATUALIZAR
-            else
-            {
-                AtualizarUsuario();
+                string nome = txtNome.Text;
+                string email = txtEmail.Text;
+                string senha = txtSenha.Text;
+                
+                var usuario = new Usuario();
+                {
+                    nome = nome;
+                    email = email;
+                    senha = senha;
+                    
+                }
             }
         }
 
         private void AtualizarUsuario()
         {
+            if(!ValidarCampos())
+                 return; 
             using (var banco = new ComandaDBContext())
             {
                 string nome = txtNome.Text;
@@ -72,7 +102,11 @@ namespace SenacFoods
                 //this.Close();
             }
         }
-        
+
+        private bool ValidarCampos()
+        {
+            throw new NotImplementedException();
+        }
 
         private void InserirUsuario()
         {

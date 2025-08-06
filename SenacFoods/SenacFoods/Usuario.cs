@@ -25,6 +25,8 @@ namespace SenacFoods
         public bool Ativo {  get; set; }
         public string Perfil { get; set; }
 
+        public string ConfirmacaoDeSenha { get; set; }
+
 
     }
 }

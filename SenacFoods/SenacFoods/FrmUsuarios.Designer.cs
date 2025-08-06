@@ -128,6 +128,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmUsuarios";
             Text = "FrmUsuarios";
+            Load += FrmUsuarios_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

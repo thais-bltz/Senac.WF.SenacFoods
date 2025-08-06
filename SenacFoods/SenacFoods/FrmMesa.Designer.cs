@@ -48,7 +48,6 @@
             label1.Size = new Size(86, 25);
             label1.TabIndex = 4;
             label1.Text = "Pesquisar";
-
             // 
             // txtPesquisa
             // 
@@ -82,6 +81,7 @@
             buttonExcluir.TabIndex = 8;
             buttonExcluir.Text = "X Excluir";
             buttonExcluir.UseVisualStyleBackColor = false;
+            buttonExcluir.Click += buttonExcluir_Click;
             // 
             // btnAdicionar
             // 
@@ -93,6 +93,7 @@
             btnAdicionar.TabIndex = 10;
             btnAdicionar.Text = "+ Item";
             btnAdicionar.UseVisualStyleBackColor = false;
+            btnAdicionar.Click += btnAdicionar_Click;
             // 
             // buttonSalvar
             // 

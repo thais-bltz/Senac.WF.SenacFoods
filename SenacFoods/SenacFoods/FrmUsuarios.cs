@@ -12,7 +12,7 @@ namespace SenacFoods
 {
     public partial class FrmUsuarios : Form
     {
-        private object usuarioSelecionado;
+        Usuario? usuarioSelecionado;
 
         public FrmUsuarios()
         {
@@ -21,13 +21,26 @@ namespace SenacFoods
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
             BuscarUsuarios();
         }
 
         private void BuscarUsuarios()
         {
-            
+
+        }
+        private void BuscarUsuario()
+        {
+            using (var bd = new ComandaDBContext())
+            {
+                var usuario = bd.Usuarios.AsQueryable();
+                if (!string.IsNullOrEmpty(txtPesquisa.Text))
+                {
+                    usuario = usuario.Where(u => u.Nome.Contains(txtPesquisa.Text) ||
+                                                    u.Email.Contains(txtPesquisa.Text));
+                }
+                dataGridView1.DataSource = usuario.ToList();
+            }
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -41,7 +54,7 @@ namespace SenacFoods
             {
                 using (var bancoDeDados = new ComandaDBContext())
                 {
-                    bancoDeDados.Usuarios.Remove((Usuario)usuarioSelecionado);
+                    bancoDeDados.Usuarios.Remove(usuarioSelecionado);
                     bancoDeDados.SaveChanges();
                 }
                 MessageBox.Show("Usuario excluido com sucesso!", "Sucesso",
@@ -60,11 +73,9 @@ namespace SenacFoods
         {
             if (usuarioSelecionado != null)
             {
-                // abrir o formulario de edição
-                var frm = new FrmUsuariosCad((Usuario)usuarioSelecionado);
-                frm.ShowDialog();
-                // atualizar a lista de cardapio
-                BuscarUsuarios();
+                var frmEditar = new FrmUsuariosCad(usuarioSelecionado);
+                frmEditar.ShowDialog();
+                BuscarUsuario();
                 usuarioSelecionado = null;
             }
         }
@@ -74,7 +85,7 @@ namespace SenacFoods
             if (e.RowIndex > 0)
             {
                 // pegar o cardapio de edição
-                usuarioSelecionado = dataGridView1.Rows[e.RowIndex].DataBoundItem as CardapioItem;
+                usuarioSelecionado = dataGridView1.Rows[e.RowIndex].DataBoundItem as Usuario;
                 btnEditar.Enabled = true;
             }
         }
@@ -82,6 +93,13 @@ namespace SenacFoods
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
+            var FrmPrincipal = new FrmPrincipal("", "");
+            FrmPrincipal.Show();
+        }
+
+        private void FrmUsuarios_Load(object sender, EventArgs e)
+        {
+            BuscarUsuario();
         }
     }
 }
