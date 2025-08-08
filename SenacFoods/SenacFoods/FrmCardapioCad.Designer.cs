@@ -1,6 +1,6 @@
 ﻿namespace SenacFoods
 {
-    partial class FrmCardapioCad
+    partial class FrmComandaCad
     {
         /// <summary>
         /// Required designer variable.

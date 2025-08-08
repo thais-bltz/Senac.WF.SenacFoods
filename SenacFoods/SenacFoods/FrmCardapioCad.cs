@@ -14,7 +14,7 @@ namespace SenacFoods
     {
         private CardapioItem _cardapioItem;
 
-        public FrmCardapioCad()
+        public FrmCardapioCad(object comandaSelecionada)
         {
             InitializeComponent();
         }
@@ -26,6 +26,10 @@ namespace SenacFoods
 
             //carregar os dados da tela
             CarregarDadosDaTela();
+        }
+
+        public FrmCardapioCad()
+        {
         }
 
         private void CarregarDadosDaTela()

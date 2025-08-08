@@ -106,6 +106,7 @@
             buttonSalvar.TabIndex = 11;
             buttonSalvar.Text = "# Salvar";
             buttonSalvar.UseVisualStyleBackColor = false;
+            buttonSalvar.Click += buttonSalvar_Click;
             // 
             // groupBox1
             // 
@@ -125,6 +126,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(847, 305);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // FrmMesa
             // 

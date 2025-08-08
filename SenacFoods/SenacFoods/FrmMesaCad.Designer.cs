@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            textBox1 = new TextBox();
+            txtNumeroPessoas = new TextBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            txtNumeroMesa = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(txtNumeroPessoas);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(txtNumeroMesa);
             groupBox1.Controls.Add(label2);
             groupBox1.Location = new Point(12, 61);
             groupBox1.Name = "groupBox1";
@@ -50,33 +50,12 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Mesas";
             // 
-            // label1
+            // txtNumeroPessoas
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(197, 30);
-            label1.TabIndex = 1;
-            label1.Text = "Cadastro de Mesas";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(57, 49);
-            label2.Name = "label2";
-            label2.Size = new Size(151, 30);
-            label2.TabIndex = 0;
-            label2.Text = "Numero Mesa";
-            label2.Click += label2_Click;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(57, 82);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(251, 31);
-            textBox1.TabIndex = 1;
+            txtNumeroPessoas.Location = new Point(57, 212);
+            txtNumeroPessoas.Name = "txtNumeroPessoas";
+            txtNumeroPessoas.Size = new Size(251, 31);
+            txtNumeroPessoas.TabIndex = 3;
             // 
             // label3
             // 
@@ -88,12 +67,33 @@
             label3.TabIndex = 2;
             label3.Text = "Numero Pessoas";
             // 
-            // textBox2
+            // txtNumeroMesa
             // 
-            textBox2.Location = new Point(57, 212);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(251, 31);
-            textBox2.TabIndex = 3;
+            txtNumeroMesa.Location = new Point(57, 82);
+            txtNumeroMesa.Name = "txtNumeroMesa";
+            txtNumeroMesa.Size = new Size(251, 31);
+            txtNumeroMesa.TabIndex = 1;
+            txtNumeroMesa.TextChanged += txtNumeroMesa_TextChanged;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F);
+            label2.Location = new Point(57, 49);
+            label2.Name = "label2";
+            label2.Size = new Size(151, 30);
+            label2.TabIndex = 0;
+            label2.Text = "Numero Mesa";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F);
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(197, 30);
+            label1.TabIndex = 1;
+            label1.Text = "Cadastro de Mesas";
             // 
             // FrmMesaCad
             // 
@@ -115,9 +115,9 @@
 
         private GroupBox groupBox1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtNumeroMesa;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txtNumeroPessoas;
         private Label label3;
     }
 }

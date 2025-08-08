@@ -12,7 +12,7 @@ namespace SenacFoods
 {
     public partial class FrmComandaCad : Form
     {
-        public FrmComandaCad()
+        public FrmComandaCad(object comandaSelecionada)
         {
             InitializeComponent();
         }

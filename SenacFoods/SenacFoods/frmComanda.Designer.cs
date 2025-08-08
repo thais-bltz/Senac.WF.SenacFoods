@@ -32,10 +32,10 @@
             txtPesquisa = new TextBox();
             btnFechar = new Button();
             groupBox1 = new GroupBox();
-            btnAdicionar = new Button();
-            dataGridView1 = new DataGridView();
-            btnEditar = new Button();
             btnExcluir = new Button();
+            dataGridView1 = new DataGridView();
+            btnAdicionar = new Button();
+            btnEditar = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -56,6 +56,7 @@
             txtPesquisa.Name = "txtPesquisa";
             txtPesquisa.Size = new Size(530, 31);
             txtPesquisa.TabIndex = 8;
+            txtPesquisa.TextChanged += txtPesquisa_TextChanged;
             // 
             // btnFechar
             // 
@@ -84,15 +85,16 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Comandas";
             // 
-            // btnAdicionar
+            // btnExcluir
             // 
-            btnAdicionar.BackColor = Color.Khaki;
-            btnAdicionar.Location = new Point(19, 43);
-            btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(167, 43);
-            btnAdicionar.TabIndex = 5;
-            btnAdicionar.Text = "Nova Comanda";
-            btnAdicionar.UseVisualStyleBackColor = false;
+            btnExcluir.BackColor = Color.IndianRed;
+            btnExcluir.Location = new Point(617, 414);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(119, 46);
+            btnExcluir.TabIndex = 11;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // dataGridView1
             // 
@@ -103,6 +105,17 @@
             dataGridView1.Size = new Size(807, 296);
             dataGridView1.TabIndex = 6;
             // 
+            // btnAdicionar
+            // 
+            btnAdicionar.BackColor = Color.Khaki;
+            btnAdicionar.Location = new Point(19, 43);
+            btnAdicionar.Name = "btnAdicionar";
+            btnAdicionar.Size = new Size(167, 43);
+            btnAdicionar.TabIndex = 5;
+            btnAdicionar.Text = "Nova Comanda";
+            btnAdicionar.UseVisualStyleBackColor = false;
+            btnAdicionar.Click += btnAdicionar_Click;
+            // 
             // btnEditar
             // 
             btnEditar.BackColor = Color.YellowGreen;
@@ -112,16 +125,7 @@
             btnEditar.TabIndex = 7;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
-            // 
-            // btnExcluir
-            // 
-            btnExcluir.BackColor = Color.IndianRed;
-            btnExcluir.Location = new Point(617, 414);
-            btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(119, 46);
-            btnExcluir.TabIndex = 11;
-            btnExcluir.Text = "Excluir";
-            btnExcluir.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // FrmComanda
             // 
